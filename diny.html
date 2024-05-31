@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voce me desculpa?</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        .painel{
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            background-color: aliceblue;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: relative; /* Adicionado */
+        }
+        #Sim{
+            height: 40px;
+            width: 60px;
+            background-color: green;
+            border: 2px solid  white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -40px;
+        }
+        #Nao{ 
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid  white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel"> 
+        <h1>voce me desculpa?</h1>
+        <h5>Ps Te amo!!!</h5>
+        <a href="https://legendary-starlight-54e72e.netlify.app"><button id="Sim">Sim!</button></a>
+        <button onmouseover="fuja()" id="Nao">Nao!</button>
+        <img src="https://64.media.tumblr.com/tumblr_lpm19twnZE1r1622co1_500.gif" alt="">
+    </div>
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("Nao");
+            
+            var LarguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+    
+            var maxX = LarguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+    
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+    
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+</body>
+</html>
